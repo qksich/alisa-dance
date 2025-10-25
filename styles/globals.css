@@ -1,0 +1,46 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: unset;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--color-light-3);
+    font-family: var(--font-second);
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+ul { list-style-type: none; }
+
+header .logo img,
+footer .container .footer-about img { min-width: 120px; }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 { margin: 0; }
+
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social button {
+    background-color: transparent;
+    border: 0;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 800px) {
+    .container { width: 95%; }
+}

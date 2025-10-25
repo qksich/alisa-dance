@@ -1,0 +1,100 @@
+.reg-block {
+    width: 100%;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: auto 30%;
+    gap: 3%;
+}
+
+.container .reg-block form {
+    border: 1px solid var(--color-gray-1);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container .reg-block form div,
+.container .reg-block form input,
+.container .reg-block form textarea {
+    width: 100%;
+}
+
+.container .reg-block form div p {
+    display: flex; gap: 10px;
+    margin-top: 5px;
+}
+
+.container .reg-block form input {
+    padding: 10px 15px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid var(--color-gray-1); 
+    border-radius: 25px;
+    &::placeholder {
+        color: var(--color-gray-3);
+    }
+}
+
+.container .reg-block form textarea {
+    padding: 10px 15px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid var(--color-gray-1); 
+    border-radius: 25px;
+    resize: none;
+    margin-bottom: 20px;
+    &::placeholder {
+        color: var(--color-gray-3);
+    }
+}
+
+.container .reg-block form label {
+    font-family: var(--font-first);
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.container .reg-block form button {
+    padding: 5px 30px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: var(--color-dark-1);
+    color: var(--color-light-1);
+    font-family: var(--font-first);
+    border: 1px solid var(--color-dark-1);
+    border-radius: 25px;
+    &:hover {
+        background-color: transparent;
+        color: var(--color-dark-1);
+        font-weight: 600;
+    }
+}
+
+.container .reg-block .description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 1000px) {
+    .reg-block {
+        grid-template-columns: 100%;
+    }
+
+    .container .reg-block form h1 {
+        font-size: 28px;
+    }
+
+    label { font-size: 14px; }
+
+    .container .reg-block form button {
+        height: 36px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+
+    .container .reg-block .description h2 { font-size: 22px; }
+    .container .reg-block .description p { font-size: 18px; }
+}

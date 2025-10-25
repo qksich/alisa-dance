@@ -1,0 +1,224 @@
+.gallery {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--color-light-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery .container {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    margin-bottom: 30px;
+}
+
+.gallery .container img {
+    width: 25%;
+}
+
+.gallery button {
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 25px;
+    border: 1px solid var(--color-dark-1);
+    background-color: var(--color-dark-1);
+    color: var(--color-light-1);
+    font-family: var(--font-third);
+    font-weight: 300;
+    margin: 0 auto;
+    &:hover {
+        background-color: transparent;
+        color: var(--color-dark-1);
+        font-weight: 500;
+    }
+}
+
+.container .about {
+    width: 100%;
+    margin: 50px 0;
+    padding: 3% 5%;
+    background-color: var(--color-dark-1);
+    display: flex;
+    gap: 20px;
+}
+
+.container .about .description {
+    width: 50%;
+    color: var(--color-light-1);
+    font-family: var(--font-first);
+}
+
+.description h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description p {
+    width: 90%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.container .about .description button {
+    padding: 0 30px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--color-light-1);
+    &:hover {
+        transform: scale(1.05);
+        background-color: transparent;
+        color: var(--color-light-1);
+    }
+}
+
+.container .about iframe {
+    margin: auto 0;
+}
+
+.container .block-teachers {
+    display: grid;
+    grid-template-columns: 35% 60%;
+    gap: 5%;
+}
+
+.container .block-teachers .teachers {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    gap: 40px;
+}
+
+.container .block-teachers .teachers > *:first-child { margin-top: 40px; }
+
+.container .block-teachers .teachers .blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .block-teachers .teachers .blocks .block {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+    max-width: 450px;
+    background-color: var(--color-gray-1);
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+}
+
+.container .block-teachers .teachers .blocks .reveal-left {
+    transform: translateX(-100px);
+}
+
+.container .block-teachers .teachers .blocks .show {
+    opacity: 1;
+    transform: none;
+}
+
+.container .block-teachers .teachers .blocks .block .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .block-teachers .teachers .blocks .block .title
+
+.container .block-teachers .teachers .blocks .block p {
+    font-family: var(--font-first);
+    font-weight: 300;
+}
+
+.container .block-teachers .teachers .blocks .block .title h3 {
+    font-size: 20px;
+    font-family: var(--font-first);
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.container .block-teachers .teachers .blocks .block .title h3::after {
+    display: block;
+    color: var(--color-gray-3);
+    font-size: 15px;
+}
+
+.container .block-teachers .teachers .blocks .block .title .first::after { content: 'Современная хореография (Contemporary)'; }
+.container .block-teachers .teachers .blocks .block .title .second::after { content: 'Hip-hop, Street Dance'; }
+.container .block-teachers .teachers .blocks .block .title .third::after { content: 'Балет, stretching'; }
+.container .block-teachers .teachers .blocks .block .title .fourth::after { content: 'Latin dance, bachata, salsa'; }
+
+.container .block-teachers .teachers .blocks .block .title img {
+    width: 45%;
+}
+
+@media (max-width: 1300px) {
+    .container .block-teachers {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .about .description {
+        width: 100%;
+    }
+
+    .container .about iframe {
+        margin: 0 auto 0 auto;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .gallery button {
+        height: 36px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+    .container .about .description h1 { font-size: 28px; }
+    .container .about .description p { font-size: 15px; }
+    .container .about .description button {
+        height: 36px;
+        font-size: 13px;
+    }
+    .container .about iframe {
+        width: 60%;
+        height: 250px;
+    }
+    .container .block-teachers .teachers > *:first-child { margin-top: 0; }
+    .container .block-teachers .description h1 { font-size: 28px; }
+    .container .block-teachers .description p { font-size: 18px;}
+}
+
+@media (max-width: 800px) {
+    .gallery .container { width: 80%; }
+}
+
+@media (max-width: 700px) {
+    .container .block-teachers .teachers {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .container .block-teachers .teachers .blocks {
+        width: 100%;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container .block-teachers .teachers .blocks .block {
+        width: 100%;
+        min-width: 100%;
+    }
+    .container .block-teachers .teachers .blocks .block .title img { width: 30%; }
+    .container .about iframe { width: 100%; }
+}
+
+@media (max-width: 400px) {
+    .container .block-teachers { gap: 20px; }
+}

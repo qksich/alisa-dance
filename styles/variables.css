@@ -1,0 +1,14 @@
+:root {
+    --color-dark-1: #000;
+    --color-gray-1: #C4C4C4;
+    --color-gray-2: #9e9e9e;
+    --color-gray-3: #525252;
+    --color-light-1: #fff;
+    --color-light-2: #EFF5F6;
+    --color-light-3: #E6EAEA;
+    --color-light-4: #DDDDDD;
+
+    --font-first: "Open Sans", sans-serif;
+    --font-second: "Poiret One", sans-serif;
+    --font-third: "Montserrat", sans-serif;
+}

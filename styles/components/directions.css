@@ -1,0 +1,115 @@
+.directions-block {
+    width: 100%;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.directions-block h1 {
+    margin: 50px auto;
+}
+
+.directions-block .directions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.directions-block .directions .direction {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+    width: 23.5%;
+    border: 1px solid var(--color-gray-1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.directions-block .directions .reveal-bottom {
+    transform: translateY(100px);
+}
+
+.directions-block .directions .show {
+    opacity: 1;
+    transform: none;
+}
+
+.directions-block .directions .direction .info { height: 100%; }
+
+.directions-block .directions .direction .info hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-gray-1);
+}
+
+.directions-block .directions .direction .info p {
+    font-family: var(--font-third);
+    font-weight: 300;
+}
+
+.directions-block .directions .direction .info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.directions-block .directions .direction .info div p {
+    margin: 0 10px;
+}
+
+.directions-block .directions .direction button {
+    position: relative;
+    padding: 8px;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--color-gray-1);
+    font-family: var(--font-third);
+    font-weight: 500;
+}
+
+.directions-block .directions .direction button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--color-gray-3);
+    transition: width 0.2s ease;
+}
+
+.directions-block .directions .direction button:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 1300px) {
+    .directions-block .directions .direction {
+        width: 47%;
+        margin-bottom: 10px;
+    }
+    .directions-block .directions .direction img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .directions-block h1 { font-size: 28px; }
+    .directions-block .directions .direction img { width:100%; }
+    .directions-block .directions .direction .info h2 { font-size: 22px; }
+    .directions-block .directions .direction .info .price { font-size: 15px; }
+    .directions-block .directions .direction .info p { font-size: 15px; }
+    .directions-block .directions .direction button { font-size: 15px;}
+}
+
+@media (max-width: 700px) {
+    .directions-block .directions .direction { width: 100%; }
+    .directions-block .directions .direction img { width: 80%; }
+}
+
+@media (max-width: 500px) {
+    .directions-block .directions .direction img { width: 100%; }
+}

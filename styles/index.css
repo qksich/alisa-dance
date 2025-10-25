@@ -1,0 +1,13 @@
+@import './fonts.css';
+@import './normalize.css';
+@import './globals.css';
+@import './variables.css';
+
+@import './components/header.css';
+@import './components/hero-slider.css';
+@import './components/about.css';
+@import './components/directions.css';
+@import './components/schedule.css';
+@import './components/redistration.css';
+@import './components/footer.css';
+@import './components/modals.css';

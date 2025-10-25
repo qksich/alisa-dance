@@ -1,0 +1,41 @@
+footer {
+    width: 100%;
+    background-color: var(--color-dark-1);
+    padding: 30px 0;
+    color: var(--color-light-1);
+}
+
+footer .container {
+    border-top: 1px solid var(--color-gray-3);
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 4%;
+}
+
+footer .container .footer-about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .container .footer-about img {margin: 0 auto;}
+
+footer .container .footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer .container .footer-menu ul li a {
+    color: var(--color-light-4);
+}
+
+footer .container .footer-contacts p {
+    margin: 5px 0;
+}
+
+footer .footer-bottom {
+    width: 80%;
+    margin: 0 auto;
+}

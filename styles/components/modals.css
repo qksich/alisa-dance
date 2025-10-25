@@ -1,0 +1,120 @@
+dialog {
+    width: 50vw;
+    height: 53vh;
+    overflow: hidden;
+    padding: 20px;
+    border: 0;
+    border-radius: 16px;
+}
+
+dialog .top-modal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+dialog .top-modal span {
+    cursor: pointer;
+    height: 25px;
+}
+
+dialog form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    padding: 10px 0 0 0 ;
+}
+
+dialog form div p {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+dialog form input,
+dialog form textarea {
+    width: 100%;
+    border: 1px solid var(--color-gray-1);
+    border-radius: 25px;
+    padding: 15px;
+    resize: none;
+}
+
+dialog form label,
+dialog form div label {
+    font-family: var(--font-third);
+    margin: 15px 0 5px 0;
+}
+
+dialog form input {
+    height: 50px;
+}
+
+dialog form .bottom-form {
+    height: 100%;
+}
+
+dialog form button {
+    font-family: var(--font-third);
+    padding: 0 30px;
+    margin: 0 auto;
+    min-height: 50px;
+    border: 1px solid var(--color-dark-1);
+    background-color: var(--color-dark-1);
+    color: var(--color-light-1);
+    border-radius: 25px;
+    &:hover {
+        background-color: transparent;
+        color: var(--color-dark-1);
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 1000px) {
+    dialog .top-modal h1 { font-size: 28px; }
+    dialog form div label { font-size: 13px; }
+}
+
+@media (max-width: 900px) {
+    dialog {
+        width: 70vw;
+    }
+    dialog form button {
+        font-size: 13px;
+        min-height: 40px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    dialog {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 500px) {
+    dialog {
+        height: 43vh;
+    }
+    dialog .top-modal h1 { font-size: 22px; }
+    dialog form button {
+        font-size: 10px;
+        min-height: 36px;
+    }
+    dialog form input,
+    dialog form textarea {
+        border-radius: 16px;
+        padding: 10px;
+    }
+    dialog form input { height: 36px; }
+}
+
+@media (max-width: 400px) {
+    dialog {
+        height: 56vh;
+    }
+    dialog form div p {
+        flex-direction: column;
+    }
+}

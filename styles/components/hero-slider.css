@@ -1,0 +1,101 @@
+.hero {
+    width: 100%;
+    margin: 90px 0;
+    position: relative;
+}
+
+.hero .slider {
+    width: 90vw;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.hero .slider .wrapper {
+    display: flex;
+    height: 600px;
+    transition: all 0.5s ease;
+}
+
+.hero .slider .wrapper .slide {
+    min-width: 100%;
+}
+
+.hero .slider .wrapper .ph1 { background: url('../images/slider1.jpg') center / cover no-repeat; }
+.hero .slider .wrapper .ph2 { background: url('../images/slider2.jpg') center / cover no-repeat; }
+.hero .slider .wrapper .ph3 { background: url('../images/slider3.jpg') center / cover no-repeat; }
+.hero .slider .wrapper .ph4 { background: url('../images/slider4.jpg') center / cover no-repeat; }
+
+.hero .about {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero .about p::after {
+    content: "ТВОЕ ТЕЛО\AТВОЙ ИНСТРУМЕНТ";
+    white-space: pre;
+    color: var(--color-light-1);
+    font-family: var(--font-third);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero .about .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero .about .buttons button {
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--color-light-1);
+    padding: 0 30px;
+    font-family: var(--font-third);
+}
+
+.hero .about .buttons .reg {
+    background-color: var(--color-light-1);
+    &:hover {
+        background-color: transparent;
+        color: var(--color-light-1);
+    }
+}
+
+.hero .about .buttons .info-button {
+    background-color: transparent;
+    border: 1px solid var(--color-light-1);
+    color: var(--color-light-1);
+    &:hover {
+        background-color: #ffffffb0;
+        color: var(--color-dark-1);
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero { margin: 70px 0;}
+    .hero .slider {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero .slider .wrapper { height: 500px; }
+    .hero .about p::after {
+        font-size: 28px;
+    }
+    .hero .about .buttons button {
+        height: 36px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero .slider .wrapper { height: 400px; }
+}
+
+@media (max-width: 700px) {
+    .hero { margin: 70px 0 40px 0;}
+}
