@@ -29,15 +29,16 @@
 
 .schedule-block .container h1 {
     margin: 0 auto 30px auto;
+    font-size: 2.8rem;
 }
 
 .schedule-block .container table {
     width: 100%;
     text-align: center;
-    font-family: var(--font-third);
     hyphens: auto;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-size: 1rem;
 }
 
 .schedule-block .container table,
@@ -63,13 +64,10 @@
 }
 
 @media (max-width: 1000px) {
-    .schedule-block .container h1 { font-size: 28px; }
-    .schedule-block .container table { font-size: 12px;}
     .schedule-block .container table tbody tr .t-time { height: 100px; }
     .schedule-block .container table .bord2 .bord1 { height: 30px; }
 }
 
 @media (max-width: 800px) {
-    .schedule-block .container table { font-size: 10px;}
     .schedule-block .container table tbody tr .t-time { height: 60px; }
 }

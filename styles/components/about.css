@@ -7,14 +7,34 @@
 }
 
 .gallery .container {
-    display: flex;
+    column-count: 4;
+    column-gap: 4rem;
     justify-content: center;
-    gap: 4%;
-    margin-bottom: 30px;
 }
 
 .gallery .container img {
-    width: 25%;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    transition: all .2s ease;
+    &:hover { transform: scale(1.02);}
+    cursor: pointer;
+}  
+
+.photo-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.photo-popup img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .gallery button {
@@ -24,13 +44,13 @@
     border: 1px solid var(--color-dark-1);
     background-color: var(--color-dark-1);
     color: var(--color-light-1);
-    font-family: var(--font-third);
     font-weight: 300;
     margin: 0 auto;
+    font-size: 1rem;
     &:hover {
         background-color: transparent;
         color: var(--color-dark-1);
-        font-weight: 500;
+        font-weight: 600;
     }
 }
 
@@ -50,14 +70,13 @@
 }
 
 .description h1 {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .description p {
     width: 90%;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-weight: 300;
 }
 
@@ -66,8 +85,9 @@
     height: 50px;
     border-radius: 25px;
     border: 1px solid var(--color-light-1);
+    font-size: 1rem;
     &:hover {
-        transform: scale(1.05);
+        font-weight: 600;
         background-color: transparent;
         color: var(--color-light-1);
     }
@@ -132,7 +152,7 @@
 }
 
 .container .block-teachers .teachers .blocks .block .title h3 {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-family: var(--font-first);
     font-weight: 500;
     padding-right: 10px;
@@ -141,7 +161,12 @@
 .container .block-teachers .teachers .blocks .block .title h3::after {
     display: block;
     color: var(--color-gray-3);
-    font-size: 15px;
+    font-size: 1rem;
+}
+
+.container .block-teachers .teachers .blocks .block p {
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .container .block-teachers .teachers .blocks .block .title .first::after { content: 'Современная хореография (Contemporary)'; }
@@ -176,24 +201,21 @@
 }
 
 @media (max-width: 1000px) {
+    .gallery .container {
+        column-gap: 2rem;
+    }
     .gallery button {
         height: 36px;
         padding: 0 20px;
-        font-size: 13px;
     }
-    .container .about .description h1 { font-size: 28px; }
-    .container .about .description p { font-size: 15px; }
     .container .about .description button {
         height: 36px;
-        font-size: 13px;
     }
     .container .about iframe {
         width: 60%;
         height: 250px;
     }
     .container .block-teachers .teachers > *:first-child { margin-top: 0; }
-    .container .block-teachers .description h1 { font-size: 28px; }
-    .container .block-teachers .description p { font-size: 18px;}
 }
 
 @media (max-width: 800px) {
@@ -201,6 +223,10 @@
 }
 
 @media (max-width: 700px) {
+    .gallery .container {
+        column-count: 2;
+        column-gap: 1rem;
+    }
     .container .block-teachers .teachers {
         flex-wrap: wrap;
         gap: 20px;

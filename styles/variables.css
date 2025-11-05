@@ -8,7 +8,26 @@
     --color-light-3: #E6EAEA;
     --color-light-4: #DDDDDD;
 
-    --font-first: "Open Sans", sans-serif;
-    --font-second: "Poiret One", sans-serif;
-    --font-third: "Montserrat", sans-serif;
+    --font-first: "Jost", sans-serif;
+    --font-second: "Montserrat", sans-serif;
+
+    font-size: 15px;
+}
+
+@media (max-width: 1300px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        font-size: 10px;
+    }
 }

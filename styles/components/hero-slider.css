@@ -1,6 +1,6 @@
 .hero {
     width: 100%;
-    margin: 90px 0;
+    margin: 70px 0;
     position: relative;
 }
 
@@ -13,7 +13,7 @@
 
 .hero .slider .wrapper {
     display: flex;
-    height: 600px;
+    height: 700px;
     transition: all 0.5s ease;
 }
 
@@ -37,8 +37,7 @@
     content: "ТВОЕ ТЕЛО\AТВОЙ ИНСТРУМЕНТ";
     white-space: pre;
     color: var(--color-light-1);
-    font-family: var(--font-third);
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 700;
 }
 
@@ -52,12 +51,13 @@
     border-radius: 25px;
     border: 1px solid var(--color-light-1);
     padding: 0 30px;
-    font-family: var(--font-third);
+    font-size: 1.1rem;
 }
 
 .hero .about .buttons .reg {
     background-color: var(--color-light-1);
     &:hover {
+        font-weight: 500;
         background-color: transparent;
         color: var(--color-light-1);
     }
@@ -68,13 +68,16 @@
     border: 1px solid var(--color-light-1);
     color: var(--color-light-1);
     &:hover {
-        background-color: #ffffffb0;
-        color: var(--color-dark-1);
+        background-color: #ffffff54;
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .hero { margin: 70px 0;}
+}
+
+@media (max-width: 1300px) {
+    
     .hero .slider {
         width: 100vw;
     }
@@ -82,13 +85,9 @@
 
 @media (max-width: 1000px) {
     .hero .slider .wrapper { height: 500px; }
-    .hero .about p::after {
-        font-size: 28px;
-    }
     .hero .about .buttons button {
         height: 36px;
         padding: 0 20px;
-        font-size: 13px;
     }
 }
 
@@ -96,6 +95,13 @@
     .hero .slider .wrapper { height: 400px; }
 }
 
-@media (max-width: 700px) {
-    .hero { margin: 70px 0 40px 0;}
+@media (max-width: 500px) {
+    .hero { margin: 50px 0;}
+}
+
+@media (max-width: 350px) {
+    .hero .about .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

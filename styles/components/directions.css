@@ -7,6 +7,7 @@
 
 .directions-block h1 {
     margin: 50px auto;
+    font-size: 2.8rem;
 }
 
 .directions-block .directions {
@@ -45,9 +46,13 @@
     background-color: var(--color-gray-1);
 }
 
+.directions-block .directions .direction .info h2 {
+    font-size: 1.5rem;
+}
+
 .directions-block .directions .direction .info p {
-    font-family: var(--font-third);
     font-weight: 300;
+    font-size: 1.05rem;
 }
 
 .directions-block .directions .direction .info div {
@@ -65,8 +70,8 @@
     margin: 0 auto;
     background-color: transparent;
     border: 0;
+    font-size: 1rem;
     border-bottom: 1px solid var(--color-gray-1);
-    font-family: var(--font-third);
     font-weight: 500;
 }
 
@@ -96,15 +101,6 @@
     }
 }
 
-@media (max-width: 1000px) {
-    .directions-block h1 { font-size: 28px; }
-    .directions-block .directions .direction img { width:100%; }
-    .directions-block .directions .direction .info h2 { font-size: 22px; }
-    .directions-block .directions .direction .info .price { font-size: 15px; }
-    .directions-block .directions .direction .info p { font-size: 15px; }
-    .directions-block .directions .direction button { font-size: 15px;}
-}
-
 @media (max-width: 700px) {
     .directions-block .directions .direction { width: 100%; }
     .directions-block .directions .direction img { width: 80%; }
@@ -112,4 +108,5 @@
 
 @media (max-width: 500px) {
     .directions-block .directions .direction img { width: 100%; }
+    .directions-block { margin: 0; }
 }

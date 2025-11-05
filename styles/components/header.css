@@ -7,8 +7,8 @@ header {
     width: 100%;
     background-color: var(--color-dark-1);
     display: flex;
-    height: 90px;
-    padding: 10px 50px;
+    height: 70px;
+    padding: 0 50px;
     justify-content: space-between;
 }
 
@@ -26,10 +26,11 @@ header nav {
 header nav ul {
     display: flex;
     gap: 30px;
+    padding: 0;
 }
 
 header nav ul li {
-    font-size: 20px;
+    font-size: 1.2rem;
     cursor: pointer;
     &:hover {
         animation: bounce 0.3s ease;
@@ -37,23 +38,28 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-size: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
     color: var(--color-light-1);
     text-decoration: none;
 }
 
 header .social button {
     color: var(--color-light-1);
+    padding: 0;
+    height: 35px;
 }
 
-header .social {
+header .social button svg {
     margin: auto 0;
 }
 
 header .contacts {
     display: flex;
-    gap: 40px;
+    gap: 50px;
 }
+
+header .contacts .social { gap: 20px;}
 
 header .contacts .reg {
     position: relative;
@@ -62,7 +68,7 @@ header .contacts .reg {
     border: 2px dashed var(--color-light-1);
     height: 50px;
     padding: 0 30px;
-    margin: auto 50px auto 0;
+    margin: auto 0;
     border: 0;
     border-radius: 25px;
 }
@@ -91,8 +97,7 @@ header .contacts .reg:hover {
 
 header .contacts .reg span {
     position: relative;
-    font-family: var(--font-third);
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
     z-index: 1;
 }
@@ -109,11 +114,14 @@ header .contacts .reg span {
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     header {
         height: 70px;
         padding: 0 30px;
     }
+}
+
+@media (max-width: 1300px) {
     header .social { display: none; }
     header .contacts .reg {
         height: 40px;
@@ -123,6 +131,26 @@ header .contacts .reg span {
 }
 
 @media (max-width: 1000px) {
-    header nav { display: none;}
+    header {
+        padding: 0 10px;
+        justify-content: center;
+        gap: 50px;
+    }
     header .contacts .reg { display: none;}
+}
+
+@media (max-width: 700px) {
+    header {
+        justify-content: space-between;
+    }
+    header nav { display: none;}
+}
+
+@media (max-width: 500px) {
+    header {
+        height: 50px;
+    }
+    header .logo img {
+        height: 50px;
+    }
 }

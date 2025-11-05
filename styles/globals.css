@@ -6,7 +6,7 @@ html {
 
 body {
     background-color: var(--color-light-3);
-    font-family: var(--font-second);
+    font-family: var(--font-first);
     overflow-x: hidden;
 }
 
@@ -14,6 +14,8 @@ button {
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
+button span { font-family: var(--font-second); }
 
 ul { list-style-type: none; }
 
@@ -25,7 +27,10 @@ footer .container .footer-about img { min-width: 120px; }
     margin: 0 auto;
 }
 
-h1, h2, h3, h4 { margin: 0; }
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: 400;
+}
 
 
 .social {
