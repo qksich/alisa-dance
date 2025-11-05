@@ -15,7 +15,10 @@ button {
     transition: all 0.2s ease;
 }
 
-button span { font-family: var(--font-second); }
+button span { 
+    font-family: var(--font-second);
+    color: inherit;
+}
 
 ul { list-style-type: none; }
 

@@ -46,12 +46,20 @@
     gap: 20px;
 }
 
-.hero .about .buttons button {
+.hero .about .buttons button,
+.hero .about .buttons a {
     height: 50px;
     border-radius: 25px;
     border: 1px solid var(--color-light-1);
     padding: 0 30px;
     font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+.hero .about .buttons a span {
+    margin: auto;
 }
 
 .hero .about .buttons .reg {

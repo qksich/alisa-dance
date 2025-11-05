@@ -1,8 +1,7 @@
-dialog { z-index: 999; }
 
 #modal-form {
     width: 40vw;
-    height: 50vh;
+    max-height: max-content;
     overflow: hidden;
     padding: 20px;
     border: 0;
@@ -39,7 +38,6 @@ dialog form {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    height: calc(100% - 50px);
 }
 
 dialog form div,
@@ -48,7 +46,10 @@ dialog form textarea {
     width: 100%;
     font-family: var(--font-second);
     font-size: 1rem;
+    margin-bottom: 20px;
 }
+
+dialog form div {margin: 0;}
 
 dialog form div p {
     display: flex; gap: 10px;
@@ -79,7 +80,6 @@ dialog form textarea {
 
 dialog form label {
     font-weight: 300;
-    margin-top: 10px;
     font-size: 1rem;
     font-family: var(--font-second);
 }
@@ -114,9 +114,6 @@ dialog .photos-gallery img {
 }
 
 @media (max-width: 1300px) {
-    #modal-form{
-        height: 55vh;
-    }
     dialog form div p {
         flex-direction: column;
     }
@@ -150,7 +147,6 @@ dialog .photos-gallery img {
 @media (max-width: 500px) {
     #modal-form {
         width: 90vw;
-        height: 50vh;
     }
     dialog form button {
         min-height: 36px;
