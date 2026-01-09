@@ -6,6 +6,7 @@
     padding: 20px;
     border: 0;
     border-radius: 16px;
+    font-size: 1rem;
 }
 
 #modal-gallery {
@@ -24,6 +25,7 @@ dialog .top-modal {
 dialog .top-modal h1 {
     font-size:2.2rem;
     line-height: 1;
+    margin-bottom: .5em;
 }
 
 dialog .top-modal span {
@@ -45,8 +47,7 @@ dialog form input,
 dialog form textarea {
     width: 100%;
     font-family: var(--font-second);
-    font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.2em;
 }
 
 dialog form div {margin: 0;}
@@ -57,21 +58,24 @@ dialog form div p {
 }
 
 dialog form input {
-    padding: 15px 15px;
+    padding: 1em;
+    height: 3em;
     background-color: transparent;
     border: 1px solid var(--color-gray-1); 
     border-radius: 25px;
+    font-size: 1rem;
     &::placeholder {
         color: var(--color-gray-3);
     }
 }
 
 dialog form textarea {
-    padding: 10px 15px;
-    height: 100px;
+    padding: 1em;
+    height: 6em;
     background-color: transparent;
     border: 1px solid var(--color-gray-1); 
     border-radius: 25px;
+    font-size: 1rem;
     resize: none;
     &::placeholder {
         color: var(--color-gray-3);
@@ -80,12 +84,11 @@ dialog form textarea {
 
 dialog form label {
     font-weight: 300;
-    font-size: 1rem;
     font-family: var(--font-second);
 }
 
 dialog form button {
-    padding: 15px 30px;
+    padding: 1em 2em;
     margin: 0 auto;
     background-color: var(--color-dark-1);
     color: var(--color-light-1);
@@ -113,22 +116,26 @@ dialog .photos-gallery img {
     border-radius: 15px;
 }
 
-@media (max-width: 1300px) {
+@media (width < 81.25rem) { /*1300px*/
     dialog form div p {
         flex-direction: column;
     }
     dialog form {
         height: calc(100% - 70px);
     }
+    #modal-form {font-size: .9rem;}
+    dialog .top-modal h1 {font-size: 1.8rem;}
+    dialog form input,
+    dialog form textarea {font-size: .8rem;}
+    dialog form button {font-size: .8rem;}
 }
 
-@media (max-width: 900px) {
+@media (width < 56.25rem) {
     #modal-form {
         width: 70vw;
     }
     dialog form button {
-        min-height: 40px;
-        padding: 0 20px;
+        font-size: .8rem;
     }
     dialog form {
         height: calc(100% - 50px);
@@ -138,25 +145,18 @@ dialog .photos-gallery img {
     }
 }
 
-@media (max-width: 700px) {
+@media (width < 43.75rem) {
     dialog {
         width: 90vw;
     }
 }
 
-@media (max-width: 500px) {
+@media (width < 31.25rem) { /*500px*/
+    dialog .top-modal h1 {font-size: 1.4rem;}
     #modal-form {
         width: 90vw;
+        font-size: .8rem;
     }
-    dialog form button {
-        min-height: 36px;
-    }
-    dialog form input,
-    dialog form textarea {
-        border-radius: 16px;
-        padding: 10px;
-    }
-    dialog form input { height: 36px; }
     #modal-gallery {
         width: 95vw;
     }
@@ -165,7 +165,7 @@ dialog .photos-gallery img {
     }
 }
 
-@media (max-width: 400px) {
+@media (width < 25rem) {
     dialog form button {
         width: 100%;
     }

@@ -1,6 +1,6 @@
 .reg-block {
     width: 100%;
-    padding: 50px 0;
+    padding: 3.125rem 0;
     display: grid;
     grid-template-columns: auto 30%;
     gap: 3%;
@@ -8,7 +8,7 @@
 
 .container .reg-block form {
     border: 1px solid var(--color-gray-1);
-    padding: 35px;
+    padding: 2.18rem;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -27,13 +27,13 @@
 }
 
 .container .reg-block form div p {
-    display: flex; gap: 10px;
-    margin-top: 5px;
+    display: flex; gap: 0.625rem;
+    margin-top: 0.3rem;
 }
 
 .container .reg-block form input {
-    padding: 10px 15px;
-    height: 50px;
+    padding: 1em;
+    height: 3em;
     background-color: transparent;
     border: 1px solid var(--color-gray-1); 
     border-radius: 25px;
@@ -43,13 +43,13 @@
 }
 
 .container .reg-block form textarea {
-    padding: 10px 15px;
-    height: 100px;
+    padding: .8em 1em;
+    height: 5em;
     background-color: transparent;
     border: 1px solid var(--color-gray-1); 
     border-radius: 25px;
     resize: none;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
     &::placeholder {
         color: var(--color-gray-3);
     }
@@ -57,14 +57,14 @@
 
 .container .reg-block form label {
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: .4em;
     font-size: 1rem;
     font-family: var(--font-second);
 }
 
 .container .reg-block form button {
-    padding: 5px 30px;
-    height: 50px;
+    padding: .3rem 2.18rem;
+    height: 3em;
     margin: 0 auto;
     background-color: var(--color-dark-1);
     color: var(--color-light-1);
@@ -72,18 +72,13 @@
     border-radius: 25px;
     font-size: 1rem;
     font-family: var(--font-second);
-    &:hover {
-        background-color: transparent;
-        color: var(--color-dark-1);
-        font-weight: 600;
-    }
 }
 
 .container .reg-block .description {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .container .reg-block .description h2 {
@@ -94,32 +89,69 @@
     font-size: 1.4rem;
 }
 
-@media (max-width: 1000px) {
+@media (width < 81.25rem) { /*1300px*/
+    .container .reg-block form h1 {
+        font-size: 2rem;
+    }
+    .container .reg-block .description h2 {
+        font-size: 1.8rem;
+    }
+    .container .reg-block .description p {
+        font-size: 1.2rem;
+    }
+    .container .reg-block form div,
+    .container .reg-block form input,
+    .container .reg-block form textarea {
+        font-size: .9rem;
+    }
+    .container .reg-block form label { font-size: .9rem;}
+}
+
+@media (width < 62.5rem) { /*1000px*/
     .reg-block {
         grid-template-columns: 100%;
     }
 
     .container .reg-block form button {
-        height: 36px;
-        padding: 0 20px;
+        font-size: .8rem;
     }
+    .container .reg-block form div,
+    .container .reg-block form input,
+    .container .reg-block form textarea {
+        font-size: .8rem;
+    }
+    .container .reg-block form label { font-size: .8rem;}
 }
 
-@media (max-width: 500px) {
+@media (width < 50rem) { /*800px*/ 
+}
+
+@media (width < 31.25rem) { /*500px*/
     .container .reg-block form {
-        padding: 15px;
+        padding: 1rem;
     }
     .container .reg-block form div p {
         flex-direction: column;
     }
-    .container .reg-block form input {
-        padding: 10px 10px;
-        height: auto;
+    .container .reg-block form h1 { font-size: 1.7rem; }
+    .container .reg-block .description h2 {
+        font-size: 1.4rem;
+    }
+    .container .reg-block .description p {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (width < 25rem) {
     .container .reg-block form button {
         width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    .container .reg-block form button:hover {
+        background-color: transparent;
+        color: var(--color-dark-1);
+        font-weight: 600;
     }
 }

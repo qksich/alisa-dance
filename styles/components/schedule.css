@@ -22,13 +22,13 @@
 }
 
 .schedule-block .container {
-    padding: 70px 0;
+    padding: 3em 0;
     display: flex;
     flex-direction: column;
 }
 
 .schedule-block .container h1 {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 1.25em auto;
     font-size: 2.8rem;
 }
 
@@ -53,21 +53,28 @@
     font-family: var(--font-second);
 }
 
-.schedule-block .container table tbody tr .t-time { height: 150px; }
+.schedule-block .container table tbody tr .t-time { height: 8em; }
 
-.schedule-block .container table .bord2 .bord1 { height: 40px; }
+.schedule-block .container table .bord2 .bord1 { height: 3em; }
 
-@media (max-width: 1300px) {
+@media (width < 81.25rem) { /*1300px*/
     .schedule-block .container {
         width: 95%;
     }
+    .schedule-block .container h1 {
+        font-size: 2.5rem;
+    }
 }
 
-@media (max-width: 1000px) {
-    .schedule-block .container table tbody tr .t-time { height: 100px; }
-    .schedule-block .container table .bord2 .bord1 { height: 30px; }
+@media (width < 62.5rem) { /*1000px*/
+    .schedule-block .container table {
+        font-size: .8rem;
+    }
+    .schedule-block .container h1 {
+        font-size: 2rem;
+    }
 }
 
-@media (max-width: 800px) {
-    .schedule-block .container table tbody tr .t-time { height: 60px; }
+@media (width < 50rem) { /*800px*/
+    .schedule-block .container table { font-size: .6rem; }
 }

@@ -1,6 +1,6 @@
 .gallery {
     width: 100%;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     background-color: var(--color-light-1);
     display: flex;
     flex-direction: column;
@@ -16,7 +16,6 @@
     margin-bottom: 1rem;
     break-inside: avoid;
     transition: all .2s ease;
-    &:hover { transform: scale(1.02);}
     cursor: pointer;
 }  
 
@@ -38,8 +37,8 @@
 }
 
 .gallery button {
-    height: 50px;
-    padding: 0 30px;
+    height: 3em;
+    padding: 0 2em;
     border-radius: 25px;
     border: 1px solid var(--color-dark-1);
     background-color: var(--color-dark-1);
@@ -47,20 +46,15 @@
     font-weight: 300;
     margin: 0 auto;
     font-size: 1rem;
-    &:hover {
-        background-color: transparent;
-        color: var(--color-dark-1);
-        font-weight: 600;
-    }
 }
 
 .container .about {
     width: 100%;
-    margin: 50px 0;
+    margin: 3rem 0;
     padding: 3% 5%;
     background-color: var(--color-dark-1);
     display: flex;
-    gap: 20px;
+    gap: 1em;
 }
 
 .container .about .description {
@@ -71,7 +65,7 @@
 
 .description h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
 }
 
 .description p {
@@ -81,16 +75,11 @@
 }
 
 .container .about .description button {
-    padding: 0 30px;
-    height: 50px;
+    padding: 0 2em;
+    height: 3em;
     border-radius: 25px;
     border: 1px solid var(--color-light-1);
     font-size: 1rem;
-    &:hover {
-        font-weight: 600;
-        background-color: transparent;
-        color: var(--color-light-1);
-    }
 }
 
 .container .about iframe {
@@ -106,8 +95,8 @@
 .container .block-teachers .teachers {
     display: flex;
     width: 100%;
-    padding: 30px;
-    gap: 40px;
+    padding: 2rem;
+    gap: 1.5em;
 }
 
 .container .block-teachers .teachers > *:first-child { margin-top: 40px; }
@@ -115,7 +104,7 @@
 .container .block-teachers .teachers .blocks {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.8rem;
 }
 
 .container .block-teachers .teachers .blocks .block {
@@ -125,9 +114,9 @@
     transition: all 0.8s ease-out;
     max-width: 450px;
     background-color: var(--color-gray-1);
-    padding: 20px;
-    border-radius: 16px;
-    gap: 20px;
+    padding: 1.5em;
+    border-radius: 1rem;
+    gap: 1em;
 }
 
 .container .block-teachers .teachers .blocks .reveal-left {
@@ -144,29 +133,23 @@
     justify-content: space-between;
 }
 
-.container .block-teachers .teachers .blocks .block .title
-
 .container .block-teachers .teachers .blocks .block p {
     font-family: var(--font-first);
     font-weight: 300;
+    font-size: 1rem;
 }
 
 .container .block-teachers .teachers .blocks .block .title h3 {
     font-size: 1.3rem;
     font-family: var(--font-first);
     font-weight: 500;
-    padding-right: 10px;
+    padding-right: 1em;
 }
 
 .container .block-teachers .teachers .blocks .block .title h3::after {
     display: block;
     color: var(--color-gray-3);
     font-size: 1rem;
-}
-
-.container .block-teachers .teachers .blocks .block p {
-    font-size: 1.2rem;
-    font-weight: 300;
 }
 
 .container .block-teachers .teachers .blocks .block .title .first::after { content: 'Современная хореография (Contemporary)'; }
@@ -178,62 +161,78 @@
     width: 45%;
 }
 
-@media (max-width: 1300px) {
+@media (width < 81.25rem) {
     .container .block-teachers {
         grid-template-columns: 100%;
     }
+    .description h1 {
+        font-size: 2.5rem;
+    }
+    .description p {
+        font-size: 1.2rem;
+    }
 }
 
-@media (max-width: 1100px) {
+@media (width < 68.75rem) {
     .container .about {
         display: flex;
         flex-direction: column;
     }
-
     .container .about .description {
         width: 100%;
     }
-
     .container .about iframe {
         margin: 0 auto 0 auto;
     }
     
 }
 
-@media (max-width: 1000px) {
+@media (width < 62.5rem) {
     .gallery .container {
         column-gap: 2rem;
     }
-    .gallery button {
-        height: 36px;
-        padding: 0 20px;
-    }
+    .gallery button,
     .container .about .description button {
-        height: 36px;
+        font-size: 0.8rem;
     }
     .container .about iframe {
         width: 60%;
-        height: 250px;
+        height: 16.625rem;
     }
     .container .block-teachers .teachers > *:first-child { margin-top: 0; }
+    .container .block-teachers .teachers .blocks .block .title h3 {
+        font-size: 1.1rem;
+    }
+    .container .block-teachers .teachers .blocks .block .title h3::after {
+        font-size: 0.8rem;
+    }
+    .container .block-teachers .teachers .blocks .block p {
+        font-size: 0.9rem;
+    }
 }
 
-@media (max-width: 800px) {
+@media (width < 50rem) {
     .gallery .container { width: 80%; }
+    .description h1 {
+        font-size: 2rem;
+    }
+    .description p {
+        font-size: 1rem;
+    }
 }
 
-@media (max-width: 700px) {
+@media (width < 43.75rem) {
     .gallery .container {
         column-count: 2;
         column-gap: 1rem;
     }
     .container .block-teachers .teachers {
         flex-wrap: wrap;
-        gap: 20px;
+        padding: 1rem;
     }
     .container .block-teachers .teachers .blocks {
         width: 100%;
-        gap: 20px;
+        gap: 1.5rem;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -245,6 +244,22 @@
     .container .about iframe { width: 100%; }
 }
 
-@media (max-width: 400px) {
-    .container .block-teachers { gap: 20px; }
+@media (width < 25rem) {
+    .container .block-teachers { gap: 1rem; }
+}
+
+@media (hover: hover) {
+    .container .about .description button:hover {
+        font-weight: 600;
+        background-color: transparent;
+        color: var(--color-light-1);
+    }
+    .gallery button:hover {
+        background-color: transparent;
+        color: var(--color-dark-1);
+        font-weight: 600;
+    }
+    .gallery .container img:hover {
+        transform: scale(1.02);
+    }
 }

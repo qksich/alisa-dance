@@ -1,12 +1,12 @@
 .directions-block {
     width: 100%;
-    margin: 100px 0;
+    margin: 6.25rem 0;
     display: flex;
     flex-direction: column;
 }
 
 .directions-block h1 {
-    margin: 50px auto;
+    margin: .8em auto;
     font-size: 2.8rem;
 }
 
@@ -22,10 +22,10 @@
     transition: all 0.8s ease-out;
     width: 23.5%;
     border: 1px solid var(--color-gray-1);
-    padding: 15px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5em;
 }
 
 
@@ -52,8 +52,10 @@
 
 .directions-block .directions .direction .info p {
     font-weight: 300;
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
+
+.directions-block .directions .direction .info .price p { font-size: 1rem; }
 
 .directions-block .directions .direction .info div {
     display: flex;
@@ -61,12 +63,12 @@
 }
 
 .directions-block .directions .direction .info div p {
-    margin: 0 10px;
+    margin: 0 .5rem;
 }
 
 .directions-block .directions .direction button {
     position: relative;
-    padding: 8px;
+    padding: .5em;
     margin: 0 auto;
     background-color: transparent;
     border: 0;
@@ -86,27 +88,39 @@
     transition: width 0.2s ease;
 }
 
-.directions-block .directions .direction button:hover::after {
-    width: 100%;
-}
-
-@media (max-width: 1300px) {
+@media (width < 81.25rem) {
     .directions-block .directions .direction {
         width: 47%;
-        margin-bottom: 10px;
+        margin-bottom: .8em;
     }
     .directions-block .directions .direction img {
         width: 80%;
         margin: 0 auto;
     }
+    .directions-block h1 { font-size: 2rem; }
 }
 
-@media (max-width: 700px) {
+@media (width < 43.75rem) {
     .directions-block .directions .direction { width: 100%; }
     .directions-block .directions .direction img { width: 80%; }
 }
 
-@media (max-width: 500px) {
+@media (width < 50rem) {
+    .directions-block .directions .direction .info h2 {
+        font-size: 1.3rem;
+    }
+    .directions-block .directions .direction button {
+        font-size: .9rem;
+    }
+}
+
+@media (width < 31.25rem) {
     .directions-block .directions .direction img { width: 100%; }
     .directions-block { margin: 0; }
+}
+
+@media (hover: hover) {
+    .directions-block .directions .direction button:hover::after {
+        width: 100%;
+    }
 }

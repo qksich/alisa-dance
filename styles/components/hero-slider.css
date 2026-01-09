@@ -1,6 +1,6 @@
 .hero {
     width: 100%;
-    margin: 70px 0;
+    margin: 4.375rem 0;
     position: relative;
 }
 
@@ -31,6 +31,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 .hero .about p::after {
@@ -48,11 +49,11 @@
 
 .hero .about .buttons button,
 .hero .about .buttons a {
-    height: 50px;
+    height: 3em;
     border-radius: 25px;
     border: 1px solid var(--color-light-1);
-    padding: 0 30px;
-    font-size: 1.1rem;
+    padding: 0 2em;
+    font-size: 1rem;
     cursor: pointer;
     transition: all .2s ease;
     text-decoration: none;
@@ -64,52 +65,64 @@
 
 .hero .about .buttons .reg {
     background-color: var(--color-light-1);
-    &:hover {
-        font-weight: 500;
-        background-color: transparent;
-        color: var(--color-light-1);
-    }
 }
 
 .hero .about .buttons .info-button {
     background-color: transparent;
     border: 1px solid var(--color-light-1);
     color: var(--color-light-1);
-    &:hover {
-        background-color: #ffffff54;
-    }
 }
 
-@media (max-width: 1400px) {
-    .hero { margin: 70px 0;}
-}
-
-@media (max-width: 1300px) {
-    
+@media (width < 81.25rem) { /*1300px*/
     .hero .slider {
         width: 100vw;
     }
 }
 
-@media (max-width: 1000px) {
+@media (width < 62.5rem) { /*1000px*/
     .hero .slider .wrapper { height: 500px; }
-    .hero .about .buttons button {
-        height: 36px;
-        padding: 0 20px;
+    .hero .about .buttons button,
+    .hero .about .buttons a {
+        font-size: 0.8rem;
+    }
+    .hero .about p::after {
+        font-size: 2rem;
     }
 }
 
-@media (max-width: 800px) {
+@media (width < 50rem) { /*800px*/
     .hero .slider .wrapper { height: 400px; }
 }
 
-@media (max-width: 500px) {
+@media (width < 31.25rem) { /*500px*/
     .hero { margin: 50px 0;}
+    .hero .about p::after {
+        font-size: 1.5rem;
+    }
+    .hero .about .buttons button,
+    .hero .about .buttons a {
+        font-size: 0.8rem;
+    }
 }
 
-@media (max-width: 350px) {
+@media (width < 21.875rem) { /*350px*/
     .hero .about .buttons {
         flex-direction: column;
         gap: 5px;
+    }
+    .hero .about .buttons button,
+    .hero .about .buttons a {
+        font-size: 0.7rem;
+    }
+}
+
+@media (hover: hover) {
+    .hero .about .buttons .info-button:hover {
+        background-color: #ffffff54;
+    }
+    .hero .about .buttons .reg:hover {
+        font-weight: 500;
+        background-color: transparent;
+        color: var(--color-light-1);
     }
 }
