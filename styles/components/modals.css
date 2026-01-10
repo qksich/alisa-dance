@@ -42,11 +42,11 @@ dialog form {
 }
 
 dialog form div,
-dialog form input,
+dialog form .field,
 dialog form textarea {
     width: 100%;
     font-family: var(--font-second);
-    margin-bottom: 1.2em;
+    margin-bottom: .8em;
 }
 
 dialog form div {margin: 0;}
@@ -56,7 +56,7 @@ dialog form div p {
     margin-top: 5px;
 }
 
-dialog form input {
+dialog form .field {
     padding: 1em;
     height: 3em;
     background-color: transparent;
@@ -84,6 +84,22 @@ dialog form textarea {
 dialog form label {
     font-weight: 300;
     font-family: var(--font-second);
+}
+
+dialog form .agreement {
+    display: flex;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+dialog form .agreement p {
+    display: block;
+    margin: auto 0;
+}
+
+dialog form .agreement input {
+    width: 1.5em;
+    margin-right: 1em;
 }
 
 dialog form button {
@@ -119,14 +135,12 @@ dialog .photos-gallery img {
     dialog form div p {
         flex-direction: column;
     }
-    dialog form {
-        height: calc(100% - 70px);
-    }
     #modal-form {font-size: .9rem;}
     dialog .top-modal h1 {font-size: 1.8rem;}
-    dialog form input,
+    dialog form .field,
     dialog form textarea {font-size: .8rem;}
     dialog form button {font-size: .8rem;}
+    dialog form .agreement { font-size: .8rem;}
 }
 
 @media (width < 56.25rem) {
@@ -135,9 +149,6 @@ dialog .photos-gallery img {
     }
     dialog form button {
         font-size: .8rem;
-    }
-    dialog form {
-        height: calc(100% - 50px);
     }
     dialog .photos-gallery {
         column-count: 2;

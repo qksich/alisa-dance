@@ -58,19 +58,36 @@
             <div>
                 <label for="first-name last-name">Имя и фамилия</label>
                 <p>
-                    <input type="text" id="first-name" placeholder="Имя">
-                    <input type="text" id="last-name" placeholder="Фамилия">
+                    <input class="field" type="text" id="first-name" placeholder="Имя">
+                    <input class="field" type="text" id="last-name" placeholder="Фамилия">
                 </p>
             </div>
             <label for="email">Эл. почта</label>
-            <input type="email" id="email" placeholder="Email">
+            <input class="field" type="email" id="email" placeholder="Email">
             <label for="message">Сообщение</label>
             <textarea id="message" placeholder="Напишите, какой стиль интересует или удобное время"></textarea>
+            <div class="agreement">
+                <input type="checkbox" required> <p>я соглашаюсь на обработку <b>моих персональных данных.</b></p>
+            </div>
             <button class="send-form">
                 <span>Отправить заявку</span>
             </button>
         </form>
     </dialog>
+    <div class="cookie-notice" data-js-cookie>
+        <div class="info-cookie">
+            Мы используем файлы cookie для работы сайта и улучшения пользовательского опыта. Cookie сохраняются на вашем устройстве и помогают 
+            запоминать настройки. Отключение cookie может повлиять на работу сайта. Продолжая использовать сайт, вы соглашаетесь на их использование.
+        </div>
+        <div class="buttons">
+            <button class="accept" data-js-accept>
+                <span>Принять</span>
+            </button>
+            <button class="reject" data-js-reject>
+                <span>Отклонить</span>
+            </button>
+        </div>
+    </div>
     <div class="hero">
         <div class="slider">
             <div class="wrapper">
@@ -140,7 +157,7 @@
                 </button>
             </div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/nlIyGacPHWg?si=UrwwqtOuOyEjYxHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            
         </div>
         <div class="block-teachers">
             <div class="description">
@@ -335,14 +352,17 @@
                 <div>
                     <label for="first-name last-name">Имя и фамилия</label>
                     <p>
-                        <input type="text" id="first-name" placeholder="Имя">
-                        <input type="text" id="last-name" placeholder="Фамилия">
+                        <input class="field" type="text" id="first-name" placeholder="Имя">
+                        <input class="field" type="text" id="last-name" placeholder="Фамилия">
                     </p>
                 </div>
                 <label for="email">Эл. почта</label>
-                <input type="email" id="email" placeholder="Email">
+                <input class="field" type="email" id="email" placeholder="Email">
                 <label for="message">Сообщение</label>
                 <textarea id="message" placeholder="Напишите, какой стиль интересует или удобное время"></textarea>
+                <div class="agreement">
+                    <input type="checkbox" required> <p>я соглашаюсь на обработку <b>моих персональных данных.</b></p>  
+                </div>
                 <button>
                     <span>Отправить заявку</span>
                 </button>

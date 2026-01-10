@@ -244,6 +244,12 @@
     .container .about iframe { width: 100%; }
 }
 
+@media (width < 31.25rem) { /*500px*/ 
+    .container .block-teachers {
+        margin-bottom: 4rem;
+    }
+}
+
 @media (width < 25rem) {
     .container .block-teachers { gap: 1rem; }
 }
