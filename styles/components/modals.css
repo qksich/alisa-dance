@@ -1,3 +1,6 @@
+dialog {
+    padding: 0;
+}
 
 #modal-form {
     width: 40vw;
@@ -11,8 +14,22 @@
 #modal-gallery {
     width: 80vw;
     height: 90vh;
-    padding: 20px;
     border: 0;
+}
+
+#modal-gallery .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+#modal-gallery .container .top-modal {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--color-light-1);
 }
 
 dialog .top-modal {
@@ -31,7 +48,6 @@ dialog .top-modal span {
     cursor: pointer;
     height: 25px;
     transition: all .2s ease;
-    &:hover { transform: scale(1.1); }
 }
 
 dialog form {
@@ -112,15 +128,11 @@ dialog form button {
     font-size: 1rem;
     font-family: var(--font-second);
     margin-top: auto;
-    &:hover {
-        background-color: transparent;
-        color: var(--color-dark-1);
-        font-weight: 600;
-    }
 }
 
 dialog .photos-gallery {
-    margin-top: 20px;
+    margin-top: 1em;
+    padding: 1em;
     column-count: 3;
     column-gap: 1rem;
 }
@@ -129,7 +141,52 @@ dialog .photos-gallery img {
     break-inside: avoid;
     margin-bottom: 1rem;
     border-radius: 15px;
+    cursor: pointer;
 }
+
+#image-viewer {
+    background-color : #00000060;
+    border: 0;
+    border-radius: 1em;
+    width: 70vw;
+    height: 80vh;
+}
+
+#image-viewer .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#image-viewer .container .viewer {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    height: 100%;
+    width: 100%;
+}
+
+#image-viewer .container .viewer .photos {
+    display: flex;
+}
+
+#image-viewer .container .viewer .photos img {
+    max-height: calc(80vh - 3rem);
+    margin: auto;
+}
+
+#image-viewer .container button {
+    background-color: #36363665;
+    border: 0;
+    color: var(--color-light-1);
+}
+
+#image-viewer .container .close-viewer {
+    height: 3rem;
+    background-color: #0000009d;
+}
+
+
 
 @media (width < 81.25rem) { /*1300px*/
     dialog form div p {
@@ -150,14 +207,29 @@ dialog .photos-gallery img {
     dialog form button {
         font-size: .8rem;
     }
+    #modal-gallery {
+        width: 95vw;
+    }
+    #image-viewer {
+        width: 90vw;
+    }
     dialog .photos-gallery {
         column-count: 2;
     }
 }
 
 @media (width < 43.75rem) {
-    dialog {
+    #modal-form {
         width: 90vw;
+    }
+    #image-viewer {
+        height: 60vh;
+    }
+    #image-viewer .container .viewer {
+        grid-template-columns: 8% 84% 8%;
+    }
+    #image-viewer .container .viewer .photos img {
+    max-height: calc(60vh - 3rem);
     }
 }
 
@@ -173,6 +245,15 @@ dialog .photos-gallery img {
     dialog .photos-gallery {
         column-gap: .5rem;
     }
+    #image-viewer .container .viewer {
+        grid-template-columns: 10% 80% 10%;
+    }
+    #image-viewer {
+        height: 50vh;
+    }
+    #image-viewer .container .viewer .photos img {
+    max-height: calc(50vh - 3rem);
+    }
 }
 
 @media (width < 25rem) {
@@ -184,5 +265,22 @@ dialog .photos-gallery img {
     }
     dialog .photos-gallery {
         column-count: 1;
+    }
+}
+
+@media (hover: hover) {
+    #image-viewer .container .viewer button:hover {
+        background-color: #3636369d;
+    }
+    #image-viewer .container .close-viewer:hover {
+        background-color: #000000de;
+    }
+    dialog form button:hover {
+        background-color: transparent;
+        color: var(--color-dark-1);
+        font-weight: 600;
+    }
+    dialog .top-modal span:hover {
+        transform: scale(1.1);
     }
 }
