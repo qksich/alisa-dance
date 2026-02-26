@@ -1,8 +1,8 @@
 class FormsValidation {
     selectors = {
         dialog: '[data-js-form-dialog]',
-        dialogForm: '[data-js-dialog-form]',
-        fieldErrors: '[data-js-dialog-form-field-errors]'
+        forms: '[data-js-form]',
+        dialogFieldErrors: '[data-js-dialog-form-field-errors]'
     }
 
     errorMessages = {
@@ -17,7 +17,7 @@ class FormsValidation {
     }
 
     manageErrors(fieldControlElement, errorMessages) {
-        const fieldErrorsElement = fieldControlElement.parentElement.querySelector(this.selectors.fieldErrors)
+        const fieldErrorsElement = fieldControlElement.parentElement.querySelector(this.selectors.dialogFieldErrors)
         if (!fieldErrorsElement) return
         fieldErrorsElement.innerHTML = errorMessages
             .map((message) => `<span class="field__errors">${message}</span>`)
@@ -45,7 +45,7 @@ class FormsValidation {
 
     onBlur(event) {
         const { target } = event
-        const isFormField = target.closest(this.selectors.dialogForm)
+        const isFormField = target.closest(this.selectors.forms)
         const isRequired = target.required
 
         if (isFormField && isRequired) {
@@ -64,7 +64,7 @@ class FormsValidation {
 
     onSubmit(event) {
         event.preventDefault()
-        const isFormElement = event.target.matches(this.selectors.dialogForm)
+        const isFormElement = event.target.matches(this.selectors.forms)
 
         if (!isFormElement) {
             return

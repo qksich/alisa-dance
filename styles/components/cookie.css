@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 10;
     width: 90%;
-    bottom: 50px;
+    bottom: 1rem;
     left: 50%;
     translate: -50%;
     background: var(--color-light-1);

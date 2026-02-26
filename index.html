@@ -54,7 +54,7 @@
                 </svg>
             </span>
         </div>
-        <form method="post" data-js-dialog-form novalidate>
+        <form method="post" data-js-form novalidate>
             <div>
                 <label for="first-name last-name">Имя и фамилия</label>
                 <div class="names">
@@ -384,24 +384,34 @@
         </section>
         <section class="container">
             <div class="reg-block" id="registration">
-                <form>
+                <form data-js-form novalidate>
                     <h1>Запишись на пробное занятие</h1>
                     <hr>
                     <div>
                         <label for="first-name last-name">Имя и фамилия</label>
-                        <p>
-                            <input class="field" type="text" id="first-name" placeholder="Имя">
-                            <input class="field" type="text" id="last-name" placeholder="Фамилия">
-                        </p>
+                        <div class="names">
+                            <p>
+                                <input class="field" type="text" id="first-name" placeholder="Имя" aria-errormessage="name-errors" minlength="2" maxlength="15" pattern="[А-Яа-яЁё]{1,15}" required>
+                                <span class="field__errors" id="name-errors" data-js-dialog-form-field-errors></span>
+                            </p>
+                            <p>
+                                <input class="field" type="text" id="last-name" placeholder="Фамилия" pattern="[А-Яа-яЁё]{1,15}" minlength="2" maxlength="15" aria-errormessage="last-name-errors" required>
+                                <span class="field__errors" id="last-name-errors" data-js-dialog-form-field-errors></span>
+                            </p>
+                        </div>
                     </div>
                     <label for="email">Эл. почта</label>
-                    <input class="field" type="email" id="email" placeholder="Email">
+                    <p>
+                        <input class="field" type="email" id="email" placeholder="Email" pattern="^\S+@\S+\.\S+$" minlength="7" maxlength="35" aria-errormessage="email-errors" required>
+                        <span class="field__errors" id="email-errors" data-js-dialog-form-field-errors></span>
+                    </p>
                     <label for="message">Сообщение</label>
                     <textarea id="message" placeholder="Напишите, какой стиль интересует или удобное время"></textarea>
                     <div class="agreement">
-                        <input type="checkbox" required> <p>я соглашаюсь на обработку <a href="#">моих персональных данных.</a></p>  
+                        <input type="checkbox" aria-errormessage="agreement-errors" required><p>я соглашаюсь на обработку <a href="#">моих персональных данных.</a></p>
                     </div>
-                    <button>
+                    <span class="field__errors" id="agreement-errors" data-js-dialog-form-field-errors></span>
+                    <button type="submit" class="send-form">
                         <span>Отправить заявку</span>
                     </button>
                 </form>

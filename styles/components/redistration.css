@@ -26,9 +26,11 @@
     font-size: 1rem;
 }
 
-.container .reg-block form div p {
-    display: flex; gap: 0.625rem;
-    margin-top: 0.3rem;
+.container .reg-block form div .names {
+    display: grid; 
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+    margin-top: 5px;
 }
 
 .container .reg-block form .field {
@@ -40,6 +42,10 @@
     &::placeholder {
         color: var(--color-gray-3);
     }
+}
+
+.container .reg-block form p {
+    margin-bottom: 0;
 }
 
 .container .reg-block form textarea {
