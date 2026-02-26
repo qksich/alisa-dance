@@ -4,6 +4,7 @@ import { revealOnScroll } from "./scrolling.js";
 import { openPhoto } from "./gallery.js";
 import { CookieAgreement } from "./cookie-agreement.js";
 import { Viewer } from "./gallery.js";
+import { FormsValidation } from "./validation.js";
 
 setInterval(slideMovement, 5000)
 formOpenClose()
@@ -12,3 +13,4 @@ window.addEventListener('load', revealOnScroll)
 openPhoto()
 new CookieAgreement
 new Viewer
+new FormsValidation

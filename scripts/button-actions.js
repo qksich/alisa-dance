@@ -18,10 +18,6 @@ export const formOpenClose = () => {
         modalForm.close() 
         document.body.style.overflow = ''
     })
-    sendFormButton.addEventListener('click', (event) => {
-        event.preventDefault
-        modalForm.close() 
-    })
     openGalleryButton.addEventListener('click', () => {
         modalGallery.showModal()
         modalGallery.focus()

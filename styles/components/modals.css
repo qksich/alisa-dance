@@ -62,14 +62,34 @@ dialog form .field,
 dialog form textarea {
     width: 100%;
     font-family: var(--font-second);
-    margin-bottom: .8em;
 }
 
 dialog form div {margin: 0;}
 
-dialog form div p {
-    display: flex; gap: 10px;
+dialog form div .names {
+    display: grid; 
+    grid-template-columns: 48% 48%;
+    gap: 4%;
     margin-top: 5px;
+}
+
+dialog form div .names p {
+    margin-bottom: .8em;
+}
+
+p span .field__errors {
+    font-size: 1em;
+    font-weight: 300;
+    font-family: var(--font-second);
+    color: rgb(180, 0, 0);
+    display: block;
+    line-height: 1.2;
+}
+
+dialog form div p a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: var(--color-dark-1);
 }
 
 dialog form .field {
@@ -128,6 +148,25 @@ dialog form button {
     font-size: 1rem;
     font-family: var(--font-second);
     margin-top: auto;
+}
+
+.toast {
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    width: 20em;
+    background: var(--color-light-1);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    padding: 1rem;
+    transition: all .2s ease;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 dialog .photos-gallery {
@@ -198,6 +237,7 @@ dialog .photos-gallery img {
     dialog form textarea {font-size: .8rem;}
     dialog form button {font-size: .8rem;}
     dialog form .agreement { font-size: .8rem;}
+    p span .field__errors {font-size: .9em;}
 }
 
 @media (width < 56.25rem) {
@@ -216,6 +256,7 @@ dialog .photos-gallery img {
     dialog .photos-gallery {
         column-count: 2;
     }
+    p span .field__errors {font-size: .8em;}
 }
 
 @media (width < 43.75rem) {
@@ -254,6 +295,10 @@ dialog .photos-gallery img {
     #image-viewer .container .viewer .photos img {
     max-height: calc(50vh - 3rem);
     }
+    .toast {
+        top: 60px;
+        padding: .7rem;
+    }
 }
 
 @media (width < 25rem) {
@@ -265,6 +310,14 @@ dialog .photos-gallery img {
     }
     dialog .photos-gallery {
         column-count: 1;
+    }
+    .toast {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-100%);
+    }
+    .show {
+        transform: translateX(-50%);
     }
 }
 

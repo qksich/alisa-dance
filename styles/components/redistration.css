@@ -66,6 +66,12 @@
     margin: auto 0;
 }
 
+.container .reg-block form .agreement p a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: var(--color-dark-1);
+}
+
 .container .reg-block form .agreement input {
     width: 1.5em;
     margin-right: 1em;
